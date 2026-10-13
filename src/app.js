@@ -15,7 +15,7 @@ const history=()=>[...(families().get(ui.selected)??[])].sort((a,b)=>a.attempt-b
 let theme='system';try{theme=localStorage.getItem('opic-theme')??'system';}catch{}
 const CHAT_URL_KEY='opic-chat-url';
 function getChatUrl(){try{return localStorage.getItem(CHAT_URL_KEY)||'https://chatgpt.com/';}catch{return 'https://chatgpt.com/';}}
-function validateChatUrl(raw){let u;try{u=new URL(raw.trim());}catch{return '올바른 URL을 입력해 주세요.';}if(u.protocol!=='https:'||u.hostname!=='chatgpt.com'||u.username||u.password)return 'https://chatgpt.com 으로 시작하는 주소를 입력해 주세요.';if(/^\/share(?:\/|$)/i.test(u.pathname))return '공유용 링크는 프로젝트 대화로 이어지지 않습니다. 주소창의 원래 대화 주소를 입력해 주세요.';return '';}
+function validateChatUrl(raw){let u;try{u=new URL(raw.trim());}catch{return '올바른 URL을 입력해 주세요.';}if(u.protocol!=='https:'||u.hostname!=='chatgpt.com'||u.username||u.password)return 'https://chatgpt.com 으로 시작하는 주소를 입력해 주세요.';if(/^\/share(?:\/|$)/i.test(u.pathname))return '공유용 링크는 프로젝트 대화로 이어지지 않습니다. 주소창의 원래 대화 주소를 입력해 주세요.';if(u.pathname==='/')return '프로젝트 안에서 연 대화의 주소를 입력해 주세요.';return '';}
 function applyTheme(){document.documentElement.dataset.theme=theme;}
 applyTheme();
 function message(text,error=false){ui.notice=text;ui.error=error;render();}

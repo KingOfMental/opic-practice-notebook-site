@@ -1,4 +1,4 @@
-const CACHE='opic-notebook-011-update-fix';
+const CACHE='opic-notebook-011-saved-status';
 const ASSETS=["./.nojekyll","./icon-192.png","./icon-512.png","./icon.svg","./index.html","./manifest.webmanifest","./samples/saipan-learning.json","./schemas/backup.schema.json","./schemas/learning.schema.json","./src/app.js","./src/db.js","./src/model.js","./src/prompts.js","./src/sample.js","./src/style.css"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('opic-notebook-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

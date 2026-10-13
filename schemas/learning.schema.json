@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "opic-learning"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "questionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "topic": {
+            "type": "string",
+            "enum": [
+              "게임하기",
+              "공원 가기",
+              "해변 가기",
+              "카페 가기",
+              "음악 감상하기",
+              "사진 촬영하기",
+              "걷기",
+              "조깅",
+              "헬스",
+              "국내여행",
+              "해외여행",
+              "집에서 보내는 휴가"
+            ]
+          },
+          "questionType": {
+            "type": "string",
+            "enum": [
+              "묘사",
+              "일상 및 습관",
+              "과거 경험",
+              "비교",
+              "롤플레이",
+              "문제 해결",
+              "돌발 상황"
+            ]
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40000
+          },
+          "originalAnswer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40000
+          },
+          "correctedAnswer": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40000
+          },
+          "feedback": {
+            "type": "object",
+            "properties": {
+              "ihAssessment": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40000
+              },
+              "strengths": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "maxItems": 50
+              },
+              "improvements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "maxItems": 50
+              }
+            },
+            "required": [
+              "ihAssessment",
+              "strengths",
+              "improvements"
+            ],
+            "additionalProperties": false
+          },
+          "grammarErrors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "original": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "corrected": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                }
+              },
+              "required": [
+                "original",
+                "corrected",
+                "explanation"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 100
+          },
+          "expressionImprovements": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40000
+            },
+            "maxItems": 100
+          },
+          "expressions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "expression": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "meaningKo": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "example": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "situation": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "관용구 및 숙어",
+                    "구동사",
+                    "원어민식 구어체",
+                    "생생한 묘사",
+                    "연결 표현",
+                    "현대적인 일상 표현",
+                    "슬랭"
+                  ]
+                },
+                "opicSuitability": {
+                  "type": "string",
+                  "enum": [
+                    "적합",
+                    "상황에 따라",
+                    "일상 대화용"
+                  ]
+                },
+                "suitabilityNote": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40000
+                }
+              },
+              "required": [
+                "expression",
+                "meaningKo",
+                "example",
+                "situation",
+                "type",
+                "opicSuitability",
+                "suitabilityNote"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 100
+          },
+          "attempt": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000
+          },
+          "comparisonFeedback": {
+            "type": "string",
+            "maxLength": 40000
+          },
+          "usedExpressions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40000
+            },
+            "maxItems": 100
+          },
+          "unusedExpressions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40000
+            },
+            "maxItems": 100
+          },
+          "reviewStatus": {
+            "type": "string",
+            "enum": [
+              "needs-review",
+              "reviewed"
+            ]
+          },
+          "isSample": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "questionId",
+          "date",
+          "topic",
+          "questionType",
+          "question",
+          "originalAnswer",
+          "correctedAnswer",
+          "feedback",
+          "grammarErrors",
+          "expressionImprovements",
+          "expressions",
+          "attempt",
+          "comparisonFeedback",
+          "usedExpressions",
+          "unusedExpressions",
+          "reviewStatus",
+          "isSample"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 5000,
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "kind",
+    "records"
+  ],
+  "additionalProperties": false
+}

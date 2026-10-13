@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "opic-learning",
+  "records": [
+    {
+      "id": "sample-saipan-1",
+      "questionId": "sample-saipan",
+      "date": "2026-10-13T00:00:00Z",
+      "topic": "해외여행",
+      "questionType": "과거 경험",
+      "question": "Tell me about a memorable trip you took.",
+      "originalAnswer": "Four years ago, I went to Saipan with my three friends. It was first time all members travel together. We have snorkeling and freediving. I make a travel film. It was very special.",
+      "correctedAnswer": "One of my most memorable trips was to Saipan about four years ago. It was the first time all four of us had traveled together. We went snorkeling and freediving, and the clear blue water completely blew me away. I also made a short film of the trip. Watching it now brings back so many great memories.",
+      "feedback": {
+        "ihAssessment": "IH를 목표로 경험의 배경, 구체적인 활동, 감정과 의미를 자연스럽게 연결하는 연습이 필요합니다. 텍스트만으로 발음과 유창성은 평가할 수 없습니다.",
+        "strengths": [
+          "여행 시점과 동행인, 활동을 설명했습니다.",
+          "영상 제작이라는 개인적인 소재가 있습니다."
+        ],
+        "improvements": [
+          "과거 경험에서는 과거 시제를 일관되게 사용하세요.",
+          "기억에 남은 한 장면과 그때의 감정을 구체화하세요."
+        ]
+      },
+      "grammarErrors": [
+        {
+          "original": "all members travel together",
+          "corrected": "all four of us had traveled together",
+          "explanation": "과거 여행보다 앞선 경험을 표현하고, 친구 그룹에는 all four of us가 자연스럽습니다."
+        },
+        {
+          "original": "We have snorkeling",
+          "corrected": "We went snorkeling",
+          "explanation": "활동은 go + -ing 형태로 표현하며 과거형 went를 사용합니다."
+        }
+      ],
+      "expressionImprovements": [
+        "It was very special 뒤에 특별했던 이유를 덧붙이세요."
+      ],
+      "expressions": [
+        {
+          "expression": "blow me away",
+          "meaningKo": "나를 완전히 감탄하게 하다",
+          "example": "The clear blue water completely blew me away.",
+          "situation": "기대 이상으로 인상적인 풍경을 설명할 때",
+          "type": "구동사",
+          "opicSuitability": "적합",
+          "suitabilityNote": "과거 경험에서는 blew me away로 사용하면 자연스럽습니다."
+        },
+        {
+          "expression": "have a blast",
+          "meaningKo": "정말 즐거운 시간을 보내다",
+          "example": "We had a blast exploring the island together.",
+          "situation": "친구들과 즐거웠던 경험",
+          "type": "관용구 및 숙어",
+          "opicSuitability": "적합",
+          "suitabilityNote": "편안한 구어체로 여행 경험에 잘 어울립니다."
+        },
+        {
+          "expression": "hit different",
+          "meaningKo": "유독 특별하게 느껴지다",
+          "example": "That sunset hit different after a long day in the water.",
+          "situation": "일상 대화에서 특별한 감상을 강조",
+          "type": "슬랭",
+          "opicSuitability": "일상 대화용",
+          "suitabilityNote": "시험에서는 felt especially meaningful 같은 분명한 표현을 우선하세요."
+        }
+      ],
+      "attempt": 1,
+      "comparisonFeedback": "",
+      "usedExpressions": [],
+      "unusedExpressions": [],
+      "reviewStatus": "needs-review",
+      "isSample": true
+    },
+    {
+      "id": "sample-saipan-2",
+      "questionId": "sample-saipan",
+      "date": "2026-10-13T01:00:00Z",
+      "topic": "해외여행",
+      "questionType": "과거 경험",
+      "question": "Tell me about a memorable trip you took.",
+      "originalAnswer": "About four years ago, all four of us went to Saipan together for the first time. We went snorkeling and freediving. The clear water blew me away, and we had a blast. I made a short film, so I can relive the trip whenever I watch it.",
+      "correctedAnswer": "About four years ago, my three friends and I went to Saipan. It was our first trip with all four of us together. We went snorkeling and freediving, and the clear blue water blew me away. We had a blast. I made a short film of the trip, so whenever I watch it, I get to relive those memories.",
+      "feedback": {
+        "ihAssessment": "시제와 연결이 좋아졌습니다. IH를 목표로 한 활동의 구체적인 장면을 더 설명해 보세요. 음성 없이 실제 등급은 판단할 수 없습니다.",
+        "strengths": [
+          "과거 시제가 안정적입니다.",
+          "추천 표현 두 개를 자연스럽게 사용했습니다."
+        ],
+        "improvements": [
+          "프리다이빙 중 본 풍경을 한두 문장 덧붙이세요."
+        ]
+      },
+      "grammarErrors": [],
+      "expressionImprovements": [
+        "relive those memories로 기억을 다시 느낀다는 의미를 구체화했습니다."
+      ],
+      "expressions": [
+        {
+          "expression": "relive those memories",
+          "meaningKo": "그 추억을 다시 생생하게 느끼다",
+          "example": "Watching the film helps me relive those memories.",
+          "situation": "사진이나 영상을 보며 경험을 회상할 때",
+          "type": "원어민식 구어체",
+          "opicSuitability": "적합",
+          "suitabilityNote": "여행·사진 주제의 마무리로 활용하기 좋습니다."
+        }
+      ],
+      "attempt": 2,
+      "comparisonFeedback": "1차보다 과거 시제가 일관되고, 감정과 여행 영상의 의미를 설명했습니다. blow me away와 have a blast를 실제로 활용했습니다. 활동을 나열하는 부분은 구체적인 장면 묘사로 확장하면 좋습니다.",
+      "usedExpressions": [
+        "blow me away",
+        "have a blast"
+      ],
+      "unusedExpressions": [
+        "hit different"
+      ],
+      "reviewStatus": "needs-review",
+      "isSample": true
+    }
+  ]
+}

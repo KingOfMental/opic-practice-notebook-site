@@ -1,2 +1,9 @@
-# opic-practice-notebook-site
-Static PWA deployment only. Learning records stay in the device; source is maintained in private opic-practice-hub.
+# OPIc Practice Notebook v0.1.0
+
+Static deployment output only. No personal learning records.
+
+Run: https://kingofmental.github.io/opic-practice-notebook-site/
+
+Source is maintained in the owner's private opic-practice-hub repository.
+
+Learning records remain in each browser's IndexedDB. Export JSON backups regularly.

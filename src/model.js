@@ -1,6 +1,6 @@
 export const TOPICS=['게임하기','공원 가기','해변 가기','카페 가기','음악 감상하기','사진 촬영하기','걷기','조깅','헬스','국내여행','해외여행','집에서 보내는 휴가'];
 export const TYPES=['묘사','일상 및 습관','과거 경험','비교','롤플레이','문제 해결','돌발 상황'];
-export const EXPRESSION_TYPES=['관용구 및 숙어','구동사','원어민식 구어체','생생한 묘사','연결 표현','현대적인 일상 표현','슬랭'];
+export const EXPRESSION_TYPES=['관용구 및 숙어','구동사','원어민식 구어체','생생한 묘사','연결 표현','현대적인 일상 표현','슬랭','필러'];
 const str={type:'string',minLength:1,maxLength:40000};
 const id={type:'string',minLength:1,maxLength:200};
 const arr=(items,maxItems=100)=>({type:'array',items,maxItems});
@@ -67,3 +67,4 @@ export function makeBackup(state){return {schemaVersion:'1.0',kind:'opic-backup'
 export function searchRecords(records,query='',topic='전체',review='전체'){
  const q=query.trim().toLocaleLowerCase();return records.filter(r=>(topic==='전체'||r.topic===topic)&&(review==='전체'||r.reviewStatus===review)&&(!q||JSON.stringify([r.question,r.originalAnswer,r.correctedAnswer,r.feedback,r.expressions,r.topic]).toLocaleLowerCase().includes(q)));
 }
+
